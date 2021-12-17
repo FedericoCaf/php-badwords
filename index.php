@@ -1,6 +1,8 @@
 <?php 
 
-
+$badword = $_GET['badword'];
+$paragrafo = 'Il Napoli ha perso, ' . $badword . '!';
+$paragrafoCensurato = str_replace($badword, '***', $paragrafo);
 
 
 ?>
@@ -15,6 +17,24 @@
   <title>Badwords</title>
 </head>
 <body>
+
+<h1> <?php echo $paragrafo; ?> </h1>
+<p> La lunghezza della frase è di
+ <strong>
+   <?php echo strlen($paragrafo) . ' ';?>
+</strong>
+ caratteri </p>
+
+ <h2>
+  <?php echo $paragrafoCensurato ?>
+  </h2>
+
+  <p> La lunghezza della frase censurata è di
+ <strong>
+   <?php echo strlen($paragrafoCensurato) . ' ';?>
+</strong>
+ caratteri </p>
+
   
 </body>
 </html>
