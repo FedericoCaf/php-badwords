@@ -1,7 +1,8 @@
 <?php 
 
 $badword = $_GET['badword'];
-$paragrafo = 'Il Napoli ha perso, ' . $badword . '!';
+
+$paragrafo = 'Il Napoli ha perso, merda!';
 $paragrafoCensurato = str_replace($badword, '***', $paragrafo);
 
 
